@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: right;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.center {
+  text-align: center;
+  color: red;
+}
 img {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 10px;
+  top: 16px;
   z-index: -1;
 }
 </style>
 </head>
 <body>
 
-<h1>Tart & Sweet</h1>
+  <h1 style="color:rgb(0, 0, 0);font-size:70px;">Tart & Sweet</h1>  
 
-<img src="w06_cherries" width="100" height="140">
+<div class="row">
+  <div class="column">
+    <img src="w06_cherries.png" alt="Snow" style="width:50%">
+  </div>
+  <div class="column">
+    <img src="Grey_full.png" alt="Forest" style="width:50%">
+  </div>
+</div>
 
-<p>Because the image has a z-index of -1, it will be placed behind the heading.</p>
+
+<h1 class="center">Cherries</h1>
+
+
+
+  <h1 align ="centre"> </h1>
+  
+
 
 </body>
 </html>
